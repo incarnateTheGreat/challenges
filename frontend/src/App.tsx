@@ -1,4 +1,11 @@
 import React from "react";
+import { Router, Route, Switch } from "react-router";
+import { createBrowserHistory } from "history";
+import routes from "routes/routes";
+import { handleNavClick } from "utils/utils";
+
+// Initialize the History Browser History.
+const history = createBrowserHistory();
 
 const App: React.FC = (): JSX.Element => {
   return (
@@ -8,44 +15,34 @@ const App: React.FC = (): JSX.Element => {
       </header>
       <section>
         <div className="row">
-          <nav className="col s4 m3 l2">left</nav>
+          <nav className="col s4 m3 l2">
+            <ul>
+              {routes.map((route, key) => {
+                return (
+                  <li
+                    key={key}
+                    onClick={handleNavClick(route.path, history)}
+                    title={route.label}
+                  >
+                    {route.label}
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
           <article className="col s8 m9 l10">
-            <div className="input-field col s6">
-              <input placeholder="Placeholder" id="name" type="text" />
-              <label htmlFor="name">Name</label>
-            </div>
-            <div className="input-field col s6">
-              <input placeholder="Placeholder" id="emailAddress" type="text" />
-              <label htmlFor="emailAddress">Email</label>
-            </div>
-            <div className="optionBoxes">
-              <p>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="receiveNewsletter"
-                    className="filled-in"
+            <Router history={history}>
+              <Switch>
+                {routes.map((route, key) => (
+                  <Route
+                    key={key}
+                    path={route.path}
+                    component={route.component}
+                    exact={route.exact}
                   />
-                  <span>Receive newsletter</span>
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="enableTargetAds"
-                    className="filled-in"
-                  />
-                  <span>Be shown targeted ads</span>
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="enableAnonymousStatistics"
-                    className="filled-in"
-                  />
-                  <span>Contribute to anonymous visit statistics</span>
-                </label>
-              </p>
-            </div>
+                ))}
+              </Switch>
+            </Router>
           </article>
         </div>
       </section>

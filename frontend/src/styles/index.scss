@@ -24,15 +24,41 @@
         height: inherit;
         line-height: unset;
         padding: 0.5rem 0.75rem;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+
+          li {
+            cursor: pointer;
+          }
+        }
       }
 
       article {
         padding: 0.5rem 0.75rem;
 
-        .optionBoxes {
-          border: 1px solid;
+        .consentInputs {
+          display: flex;
+        }
+
+        .consentSelectors {
+          align-items: center;
           display: flex;
           flex-direction: column;
+
+          span {
+            line-height: unset;
+          }
+
+          &-selectors {
+            border: 1px solid;
+            display: flex;
+            flex-direction: column;
+            margin: 10px auto;
+            padding: 10px;
+            width: 350px;
+          }
         }
       }
     }
