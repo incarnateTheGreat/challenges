@@ -1,0 +1,52 @@
+@import "./_variables";
+@import "./_defaults";
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  header {
+    background: $base-header-colour;
+    color: $white;
+    display: flex;
+    padding: 1rem 0.75rem;
+  }
+
+  section {
+    height: 100vh;
+    overflow-y: scroll;
+
+    .row {
+      height: 100%;
+
+      nav {
+        height: inherit;
+        line-height: unset;
+        padding: 0.5rem 0.75rem;
+      }
+
+      article {
+        padding: 0.5rem 0.75rem;
+
+        .optionBoxes {
+          border: 1px solid;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  footer {
+    background: $base-header-colour;
+    color: $white;
+    display: flex;
+
+    .footer-container {
+      display: flex;
+      font-size: $size-16;
+      padding: 20px;
+    }
+  }
+}

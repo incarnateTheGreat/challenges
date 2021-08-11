@@ -1,0 +1,73 @@
+html {
+  font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $base-background-colour;
+}
+
+a,
+.link {
+  color: $link-color;
+  cursor: pointer;
+  font-size: $size-14;
+  text-decoration: none;
+  transition: all 0.15s;
+  white-space: nowrap;
+
+  &:hover {
+    color: $link-color-light;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+button,
+.button {
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 4px 10px;
+  text-align: center;
+  transition: 100ms ease-in;
+
+  &:hover,
+  &.active {
+    background-color: $base-header-colour;
+    color: $white;
+  }
+
+  &:disabled,
+  &[disabled] {
+    cursor: default;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &-primary {
+    background-color: $base-header-colour;
+    border: 1px solid;
+    color: $white;
+
+    &:hover,
+    &.active {
+      background-color: transparent;
+      color: $black;
+    }
+  }
+}
