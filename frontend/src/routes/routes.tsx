@@ -1,5 +1,5 @@
-import GiveConsent from "views/giveConsent.component";
-import Consents from "views/consents.component";
+import GiveConsent from "views/GiveConsent/giveConsentView.view";
+import DisplayConsentsView from "views/DisplayConsentsView/displayConsentsView.view";
 
 const routes = [
   {
@@ -9,9 +9,9 @@ const routes = [
     exact: true,
   },
   {
-    label: "Consents",
+    label: "Display consents",
     path: "/consents",
-    component: Consents,
+    component: DisplayConsentsView,
     exact: true,
   },
 ];

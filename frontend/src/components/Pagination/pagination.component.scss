@@ -1,0 +1,17 @@
+.pagination {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  &-link {
+    color: $white;
+    cursor: pointer;
+  }
+
+  &-pages {
+    button {
+      cursor: pointer;
+      margin: 0 4px;
+    }
+  }
+}

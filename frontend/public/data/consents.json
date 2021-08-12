@@ -1,0 +1,73 @@
+{
+  "consentValues": {
+    "receiveNewsletter": "Receive newsletter",
+    "enableTargetAds": "Be shown target ads",
+    "enableAnonymousStatistics": "Contribute to anonymous visit statistics"
+  },
+  "consents": [
+    {
+      "name": "Canada",
+      "email": "tqtest007@yopmail.com",
+      "receiveNewsletter": false,
+      "enableTargetAds": true,
+      "enableAnonymousStatistics": false,
+      "id": 1
+    },
+    {
+      "name": "Olive",
+      "email": "gtsaconas@varicent.com",
+      "receiveNewsletter": false,
+      "enableTargetAds": true,
+      "enableAnonymousStatistics": true,
+      "id": 2
+    },
+    {
+      "name": "Canada",
+      "email": "gtsaconas@varicent.com",
+      "receiveNewsletter": false,
+      "enableTargetAds": false,
+      "enableAnonymousStatistics": true,
+      "id": 3
+    },
+    {
+      "name": "Thingy",
+      "email": "someone@home.com",
+      "receiveNewsletter": false,
+      "enableTargetAds": true,
+      "enableAnonymousStatistics": false,
+      "id": 4
+    },
+    {
+      "name": "Canada",
+      "email": "tqtest00@yopmail.com",
+      "receiveNewsletter": false,
+      "enableTargetAds": true,
+      "enableAnonymousStatistics": false,
+      "id": 5
+    },
+    {
+      "name": "Canada",
+      "email": "tqtest007@yopmail.com",
+      "receiveNewsletter": false,
+      "enableTargetAds": true,
+      "enableAnonymousStatistics": false,
+      "id": 6
+    },
+    {
+      "name": "Canada",
+      "email": "tqtest007@yopmail.com",
+      "receiveNewsletter": true,
+      "enableTargetAds": true,
+      "enableAnonymousStatistics": false,
+      "id": 7
+    },
+    {
+      "name": "Garry Tsaconas",
+      "email": "gtsaconas@varicent.com",
+      "receiveNewsletter": true,
+      "enableTargetAds": true,
+      "enableAnonymousStatistics": true,
+      "id": 8
+    }
+  ]
+}

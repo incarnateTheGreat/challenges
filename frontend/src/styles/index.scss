@@ -1,6 +1,14 @@
 @import "./_variables";
 @import "./_defaults";
 
+// Views
+@import "../views/GiveConsent/giveConsentView.component";
+@import "../views/DisplayConsentsView/displayConsentsView.component";
+
+// Components
+@import "../components/Spinner/spinner.component";
+@import "../components/Pagination/pagination.component";
+
 .App {
   display: flex;
   flex-direction: column;
@@ -14,8 +22,7 @@
   }
 
   section {
-    height: 100vh;
-    overflow-y: scroll;
+    flex: 1;
 
     .row {
       height: 100%;
@@ -23,7 +30,7 @@
       nav {
         height: inherit;
         line-height: unset;
-        padding: 0.5rem 0.75rem;
+        padding: 1rem 0.75rem;
 
         ul {
           display: flex;
@@ -36,7 +43,7 @@
       }
 
       article {
-        padding: 0.5rem 0.75rem;
+        padding: 1rem 0.75rem;
 
         .consentInputs {
           display: flex;
@@ -55,7 +62,7 @@
             border: 1px solid;
             display: flex;
             flex-direction: column;
-            margin: 10px auto;
+            margin: 10px auto 20px;
             padding: 10px;
             width: 350px;
           }

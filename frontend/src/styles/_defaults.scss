@@ -71,3 +71,8 @@ button,
     }
   }
 }
+
+// Materialize overrides
+table.striped > tbody > tr:nth-child(odd) {
+  background: rgba(238, 110, 115, 0.25);
+}
