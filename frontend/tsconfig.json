@@ -18,6 +18,7 @@
       "paths": {
         "@app/*": ["app/*"],
         "@utils/*": ["app/utils/*"],
+        "@hooks/*": ["app/hooks/*"],
         "@interfaces/*": ["app/interfaces/*"],
         "@assets/*": ["assets/*"]
       },

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { useMutation } from "react-query";
 import { BASE_URL } from "utils/constants";
 import Spinner from "components/Spinner/spinner.component";
+import useCreateConsent from "hooks/useCreateConsent";
 
 const GiveConsentView = () => {
   const history = useHistory();
@@ -26,14 +26,7 @@ const GiveConsentView = () => {
   };
 
   // Handle the addition of a new Consent.
-  const { mutate, isLoading } = useMutation(createConsent, {
-    // Navigate to the listed consents' page.
-    onSuccess: async () => {
-      await history.push({
-        pathname: "/consents",
-      });
-    },
-  });
+  const { mutate, isLoading } = useCreateConsent(history, createConsent);
 
   // If all the fields have been populated, then allow for submission.
   const isSubmitEnabled = () => {

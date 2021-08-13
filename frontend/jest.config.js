@@ -30,6 +30,8 @@ module.exports = {
       '\\.(css|less)$': '<rootDir>/src/tests/mocks/styleMock.js',
       '^utils(.*)$': '<rootDir>/src/utils$1',
       '^components(.*)$': '<rootDir>/src/components$1',
+      '^interfaces(.*)$': '<rootDir>/src/interfaces$1',
+      '^hooks(.*)$': '<rootDir>/src/hooks$1',
       '^tests(.*)$': '<rootDir>/src/tests$1'
     },
   
