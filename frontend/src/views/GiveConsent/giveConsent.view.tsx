@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useMutation } from "react-query";
 import { BASE_URL } from "utils/constants";
@@ -57,9 +57,11 @@ const GiveConsentView = () => {
       <div className="giveConsent-consentInputs">
         <div className="input-field col s6">
           <input
+            data-testid="giveConsent-name"
             placeholder="Name"
             id="name"
             type="text"
+            value={formValues.name}
             onChange={(e) =>
               setFormValues({ ...formValues, name: e.target.value })
             }
@@ -68,9 +70,11 @@ const GiveConsentView = () => {
         </div>
         <div className="input-field col s6">
           <input
+            data-testid="giveConsent-email"
             placeholder="Email"
             id="email"
             type="text"
+            value={formValues.email}
             onChange={(e) =>
               setFormValues({ ...formValues, email: e.target.value })
             }
@@ -83,8 +87,10 @@ const GiveConsentView = () => {
         <div className="giveConsent-consentSelectors-selectors">
           <label>
             <input
+              data-testid="giveConsent-receiveNewsletter"
               type="checkbox"
               id="receiveNewsletter"
+              checked={formValues.receiveNewsletter}
               onChange={(e) =>
                 setFormValues({
                   ...formValues,
@@ -96,8 +102,10 @@ const GiveConsentView = () => {
           </label>
           <label>
             <input
+              data-testid="giveConsent-enableTargetAds"
               type="checkbox"
               id="enableTargetAds"
+              checked={formValues.enableTargetAds}
               onChange={(e) =>
                 setFormValues({
                   ...formValues,
@@ -109,8 +117,10 @@ const GiveConsentView = () => {
           </label>
           <label>
             <input
+              data-testid="giveConsent-enableAnonymousStatistics"
               type="checkbox"
               id="enableAnonymousStatistics"
+              checked={formValues.enableAnonymousStatistics}
               onChange={(e) =>
                 setFormValues({
                   ...formValues,
@@ -122,6 +132,7 @@ const GiveConsentView = () => {
           </label>
         </div>
         <button
+          data-testid="giveConsent-submitBtn"
           className="btn waves-effect waves-light"
           type="button"
           disabled={!isSubmitEnabled()}

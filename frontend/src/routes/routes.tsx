@@ -1,5 +1,5 @@
-import GiveConsent from "views/GiveConsent/giveConsentView.view";
-import DisplayConsentsView from "views/DisplayConsentsView/displayConsentsView.view";
+import GiveConsent from "views/GiveConsent/giveConsent.view";
+import DisplayConsentsView from "views/DisplayConsents/displayConsents.view";
 
 const routes = [
   {

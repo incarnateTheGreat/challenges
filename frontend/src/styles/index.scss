@@ -2,8 +2,8 @@
 @import "./_defaults";
 
 // Views
-@import "../views/GiveConsent/giveConsentView.component";
-@import "../views/DisplayConsentsView/displayConsentsView.component";
+@import "../views/GiveConsent/giveConsent.view";
+@import "../views/DisplayConsents/displayConsents.view";
 
 // Components
 @import "../components/Spinner/spinner.component";

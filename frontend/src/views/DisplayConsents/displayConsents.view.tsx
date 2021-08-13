@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { useQuery } from "react-query";
 import Spinner from "components/Spinner/spinner.component";
 import Pagination from "components/Pagination/pagination.component";
@@ -10,7 +10,7 @@ const DisplayConsentsView = () => {
   const { repoName } = useContext(ConsentsContext);
   const [pageNumber, setPageNumber] = useState<number>(1);
   const [consentDataRes, setConsentDataRes] = useState({});
-  const { isLoading, data } = useQuery<ConsentsData[]>(
+  const { isLoading, data, error } = useQuery<ConsentsData[]>(
     [repoName, pageNumber],
     () => {
       let url = `${BASE_URL}/consents?_page=${pageNumber}&_limit=2`;
@@ -115,6 +115,13 @@ const DisplayConsentsView = () => {
 
       {!isLoading && data?.length === 0 && (
         <div>Sorry. There is no data to display.</div>
+      )}
+
+      {!isLoading && !data && error && (
+        <div>
+          Sorry. There was a problem connecting to the service. Please try again
+          later.
+        </div>
       )}
     </div>
   );

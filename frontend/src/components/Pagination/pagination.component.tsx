@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { assignActivePageClass } from "utils/utils";
 
 const Pagination = ({ data, pageNumber, setPageNumber }) => {

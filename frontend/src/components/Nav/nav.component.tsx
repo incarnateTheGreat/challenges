@@ -1,4 +1,3 @@
-import React from "react";
 import routes from "routes/routes";
 import { withRouter } from "react-router-dom";
 import { assignActivePageClass, handleNavClick } from "utils/utils";
