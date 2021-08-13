@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { createBrowserHistory } from "history";
 import { Toaster } from "react-hot-toast";
 import routes from "routes/routes";
-import { ConsentsContext } from "interfaces/interface";
+import { ConsentsContext, ConsentsContextValues } from "interfaces/interface";
 import Nav from "components/Nav/nav.component";
 
 // Initialize the History Browser History.
@@ -17,7 +17,7 @@ const App: React.FC = (): JSX.Element => {
   const repoName = "consentsRepo";
 
   // Store values for context and memoize them.
-  const values: ConsentsContext = useMemo(
+  const values: ConsentsContextValues = useMemo(
     () => ({
       repoName,
     }),

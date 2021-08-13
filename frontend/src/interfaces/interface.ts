@@ -7,9 +7,8 @@ export interface ConsentsData {
   enableTargetAds: boolean;
   enableAnonymousStatistics: boolean;
 }
-
-export interface ConsentsContext {
+export interface ConsentsContextValues {
   repoName: string;
 }
 
-export const ConsentsContext = createContext({} as ConsentsContext);
+export const ConsentsContext = createContext({} as ConsentsContextValues);
