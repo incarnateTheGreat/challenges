@@ -4,15 +4,6 @@ export const handleNavClick = (path, history) => () => {
   history.push(path);
 };
 
-// Toasts
-export const notifyError = () => {
-  return toast.error("There was an error with your request.");
-};
-
-export const notifyPostSuccess = () => {
-  return toast.success("Your Consent has been added.");
-};
-
 // Parse the Link Headers that come from the server call.
 export const parseLinkHeader = (linkHeader) => {
   const linkHeadersArray = linkHeader
@@ -40,3 +31,12 @@ export const parseLinkHeader = (linkHeader) => {
 
 export const assignActivePageClass = (current, page) =>
   current === page ? "active" : "";
+
+// Toasts
+export const notifyError = () => {
+  return toast.error("There was an error with your request.");
+};
+
+export const notifyPostSuccess = () => {
+  return toast.success("Your Consent has been added.");
+};

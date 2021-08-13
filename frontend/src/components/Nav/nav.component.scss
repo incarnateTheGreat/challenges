@@ -1,0 +1,44 @@
+.siteNav {
+  height: inherit;
+  line-height: unset;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+
+    li {
+      color: rgba($white, 0.75);
+      cursor: pointer;
+      transition: all 0.15s;
+
+      &.active {
+        background: transparent;
+        color: $white;
+        font-weight: 600;
+      }
+
+      &:hover {
+        color: rgba($white, 0.75);
+
+        &:not(&:active) {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .siteNav {
+    height: auto;
+
+    ul {
+      flex-direction: row;
+
+      li {
+        margin: 0 8px 0 0;
+      }
+    }
+  }
+}

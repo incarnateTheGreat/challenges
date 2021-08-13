@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useMutation } from "react-query";
 import { BASE_URL } from "utils/constants";
 import Spinner from "components/Spinner/spinner.component";
-import { store } from "reducers/store";
-
-store.subscribe(() => console.log(store.getState()));
 
 const GiveConsentView = () => {
   const history = useHistory();
@@ -15,10 +12,6 @@ const GiveConsentView = () => {
     receiveNewsletter: false,
     enableTargetAds: false,
     enableAnonymousStatistics: false,
-  });
-
-  useEffect(() => {
-    console.log(store.getState());
   });
 
   // Fire the POST call to create the Consent.
@@ -38,7 +31,6 @@ const GiveConsentView = () => {
     onSuccess: async () => {
       await history.push({
         pathname: "/consents",
-        state: { isConsentAdded: true },
       });
     },
   });
@@ -61,8 +53,8 @@ const GiveConsentView = () => {
   };
 
   return (
-    <>
-      <div className="consentInputs">
+    <div className="giveConsent">
+      <div className="giveConsent-consentInputs">
         <div className="input-field col s6">
           <input
             placeholder="Name"
@@ -86,9 +78,9 @@ const GiveConsentView = () => {
           <label htmlFor="email">Email</label>
         </div>
       </div>
-      <div className="consentSelectors">
+      <div className="giveConsent-consentSelectors">
         <span>I agree to:</span>
-        <div className="consentSelectors-selectors">
+        <div className="giveConsent-consentSelectors-selectors">
           <label>
             <input
               type="checkbox"
@@ -140,16 +132,8 @@ const GiveConsentView = () => {
           <span className="consentSelectors-buttonTitle">Give consent</span>{" "}
           {isLoading && <Spinner position="mini" />}
         </button>
-        <button
-          type="button"
-          onClick={() =>
-            store.dispatch({ type: "consent/add", payload: formValues })
-          }
-        >
-          Hit
-        </button>
       </div>
-    </>
+    </div>
   );
 };
 

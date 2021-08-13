@@ -1,11 +1,10 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { useQuery } from "react-query";
 import Spinner from "components/Spinner/spinner.component";
 import Pagination from "components/Pagination/pagination.component";
 import { ConsentsData, ConsentsContext } from "interfaces/interface";
 import { BASE_URL } from "utils/constants";
 import { parseLinkHeader } from "utils/utils";
-import { store } from "reducers/store";
 
 const DisplayConsentsView = () => {
   const { repoName } = useContext(ConsentsContext);
@@ -39,10 +38,6 @@ const DisplayConsentsView = () => {
     }
   );
 
-  useEffect(() => {
-    console.log(store.getState());
-  });
-
   // Get the Consent values to display in the table.
   const { data: consentsMap = {} } = useQuery(
     [],
@@ -57,7 +52,7 @@ const DisplayConsentsView = () => {
   );
 
   return (
-    <div className="displayConsentsView">
+    <div className="displayConsents">
       {isLoading && <Spinner position="floatCenter" />}
 
       {!isLoading && data?.length > 0 && (

@@ -7,6 +7,7 @@
 
 // Components
 @import "../components/Spinner/spinner.component";
+@import "../components/Nav/nav.component";
 @import "../components/Pagination/pagination.component";
 
 .App {
@@ -27,46 +28,8 @@
     .row {
       height: 100%;
 
-      nav {
-        height: inherit;
-        line-height: unset;
-        padding: 1rem 0.75rem;
-
-        ul {
-          display: flex;
-          flex-direction: column;
-
-          li {
-            cursor: pointer;
-          }
-        }
-      }
-
       article {
         padding: 1rem 0.75rem;
-
-        .consentInputs {
-          display: flex;
-        }
-
-        .consentSelectors {
-          align-items: center;
-          display: flex;
-          flex-direction: column;
-
-          span {
-            line-height: unset;
-          }
-
-          &-selectors {
-            border: 1px solid;
-            display: flex;
-            flex-direction: column;
-            margin: 10px auto 20px;
-            padding: 10px;
-            width: 350px;
-          }
-        }
       }
     }
   }

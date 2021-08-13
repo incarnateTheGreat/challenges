@@ -1,11 +1,34 @@
-.consentSelectors {
-  button {
-    align-items: center;
+.giveConsent {
+  &-consentInputs {
     display: flex;
-    justify-content: space-between;
   }
 
-  .spinner {
-    margin: 0 0 0 10px;
+  &-consentSelectors {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    button {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    span {
+      line-height: unset;
+    }
+
+    &-selectors {
+      border: 1px solid;
+      display: flex;
+      flex-direction: column;
+      margin: 10px auto 20px;
+      padding: 10px;
+      width: 350px;
+    }
+
+    .spinner {
+      margin: 0 0 0 10px;
+    }
   }
 }
