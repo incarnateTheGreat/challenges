@@ -7,6 +7,7 @@ Thanks for allowing me to work on this challenge! Here are some notes regarding 
 - Instead of using `React-Redux` for state management, I went about using `json-server` to simulate a live working environment where data would be accessible from anywhere.
 - `react-query` was utilized for HTTP calls to the `json-server`.
 - `Materialize` (based off of Material Design) was used for the styles and scaffolding; the application is fully responsive.
+- There are a couple of test files for both Views; they were written using `Jest` and `React Testing Library`.
 
 ## Setup
 
