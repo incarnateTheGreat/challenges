@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { BASE_URL } from "utils/constants";
+import { isValidEmail } from "utils/utils";
 import Spinner from "components/Spinner/spinner.component";
 import useCreateConsent from "hooks/useCreateConsent";
 
@@ -41,6 +42,7 @@ const GiveConsentView = () => {
     return (
       name &&
       email &&
+      isValidEmail(formValues.email) &&
       (receiveNewsletter || enableTargetAds || enableAnonymousStatistics)
     );
   };
@@ -73,6 +75,11 @@ const GiveConsentView = () => {
             }
           />
           <label htmlFor="email">Email</label>
+          {!isValidEmail(formValues.email) && (
+            <span className="giveConsent-consentInputs-helper-text">
+              The email address is invalid.
+            </span>
+          )}
         </div>
       </div>
       <div className="giveConsent-consentSelectors">

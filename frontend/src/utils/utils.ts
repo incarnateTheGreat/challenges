@@ -40,3 +40,13 @@ export const notifyError = () => {
 export const notifyPostSuccess = () => {
   return toast.success("Your Consent has been added.");
 };
+
+export const isValidEmail = (val) => {
+  let regEmail =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (!regEmail.test(val) && val.length > 0) {
+    return false;
+  }
+
+  return true;
+};

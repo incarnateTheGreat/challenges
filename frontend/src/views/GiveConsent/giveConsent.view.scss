@@ -1,6 +1,11 @@
 .giveConsent {
   &-consentInputs {
     display: flex;
+
+    &-helper-text {
+      color: rgba($red, 0.8);
+      font-size: $size-14;
+    }
   }
 
   &-consentSelectors {
