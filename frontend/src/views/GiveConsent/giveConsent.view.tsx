@@ -29,7 +29,7 @@ const GiveConsentView = () => {
   // Handle the addition of a new Consent.
   const { mutate, isLoading } = useCreateConsent(history, createConsent);
 
-  // If all the fields have been populated, then allow for submission.
+  // If all the fields have been populated and validated., then allow for submission.
   const isSubmitEnabled = () => {
     const {
       name,
